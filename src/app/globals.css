@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #05070c;
+  --color-ink: #0a0d14;
+  --color-cyan: #00ffc8;
+  --color-orange: #ff6b00;
+  --color-purple: #7b2fff;
+  --color-paper: #e8efe9;
+  --color-mute: #8b958e;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --grid-template-columns-16: repeat(16, minmax(0, 1fr));
+}
+
+html,
+body {
+  background: var(--color-void);
+  color: var(--color-paper);
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(123, 47, 255, 0.16), transparent 55%),
+    radial-gradient(900px 500px at 110% 10%, rgba(0, 255, 200, 0.08), transparent 50%),
+    radial-gradient(800px 400px at 50% 120%, rgba(255, 107, 0, 0.07), transparent 55%),
+    linear-gradient(#05070c, #05070c);
+}
+
+::selection {
+  background: rgba(0, 255, 200, 0.25);
+  color: #fff;
+}
+
+.glass {
+  background: rgba(10, 13, 20, 0.62);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 24px 80px -28px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.scan {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+textarea,
+input {
+  font-family: var(--font-mono);
+}
